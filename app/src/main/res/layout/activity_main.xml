@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/box_inset_layout_padding"
+    tools:context=".ui.MainActivity"
+    tools:deviceIds="wear">
+
+
+    <TextView
+        android:id="@+id/counterText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/plusCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/spacing_forty"
+        android:layout_marginBottom="@dimen/spacing_twenty"
+        android:src="@drawable/ic_baseline_add_24"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintEnd_toStartOf="@+id/counterText"
+        app:layout_constraintTop_toTopOf="@+id/counterText"
+        tools:ignore="ContentDescription" />
+
+    <ImageButton
+        android:id="@+id/minusCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/spacing_forty"
+        android:layout_marginBottom="@dimen/spacing_twenty"
+        android:src="@drawable/ic_baseline_minus_24"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintStart_toEndOf="@+id/counterText"
+        app:layout_constraintTop_toTopOf="@+id/counterText"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_ten"
+        android:text="@string/reset"
+        android:textAllCaps="false"
+        android:textColor="#FFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/counterText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
